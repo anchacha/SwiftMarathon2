@@ -10,33 +10,27 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var firstButton: ShrinkableButton!
-    @IBOutlet var secondButton: UIButton!
-    //    @IBOutlet var thirdButton: UIButton!
-    var thirdButton: UIButton!
+    @IBOutlet var secondButton: ShrinkableButton!
+    
+    private var thirdButton: ShrinkableButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.firstButton.buttonColor = .red
+        self.secondButton.buttonColor = .magenta
         
         self.configureButton(button: self.firstButton, text: "First button")
         self.configureButton(button: self.secondButton, text: "Second medium button")
-        
-        if #available(iOS 15.0, *) {
-            self.configureThirdButton()
-        } else {
-            self.configureButton(button: self.thirdButton, text: "Third button old config")
-        }
+        self.configureThirdButton()
     }
     
     func configureButton(button: UIButton, text: String) {
-        if #available(iOS 15.0, *) {
-            button.configuration = nil
-        }
+        button.configuration = nil
         button.setTitle(text, for: .normal)
         button.setImage(.init(systemName: "paperplane"), for: .normal)
         button.semanticContentAttribute = .forceRightToLeft
-        
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = (button as? ShrinkableButton)?.buttonColor ?? .systemBlue
         button.tintColor = .white
         button.layer.cornerRadius = 6
         button.setInsets(forContentPadding: .init(
@@ -47,24 +41,23 @@ class ViewController: UIViewController {
     @available(iOS 15.0, *)
     func configureThirdButton() {
         var buttonConfiguration = UIButton.Configuration.filled()
-        buttonConfiguration.cornerStyle = .large
+        buttonConfiguration.cornerStyle = .capsule
         buttonConfiguration.image = .init(systemName: "paperclip")
         buttonConfiguration.contentInsets = NSDirectionalEdgeInsets(top: 10,
                                                                     leading: 14,
                                                                     bottom: 10,
                                                                     trailing: 14)
         
-        buttonConfiguration.title = "Third button config from code"
-        buttonConfiguration.baseBackgroundColor = .systemBlue
+        buttonConfiguration.title = "Third button with configuration"
         buttonConfiguration.imagePlacement = .trailing
         buttonConfiguration.imagePadding = 8
         
-        let button = ShrinkableButton(configuration: buttonConfiguration, primaryAction: UIAction(handler: { action in
-            print(action)
+        let button = ShrinkableButton(configuration: buttonConfiguration, primaryAction: .init(handler: { action in
             let modalController = UIViewController()
-            modalController.view.backgroundColor = .magenta
+            modalController.view.backgroundColor = .white.withAlphaComponent(0.8)
             self.present(modalController, animated: true)
         }))
+        
         self.thirdButton = button
         self.thirdButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.thirdButton)
@@ -73,7 +66,5 @@ class ViewController: UIViewController {
             .init(item: button, attribute: .top, relatedBy: .equal, toItem: self.secondButton, attribute: .bottom, multiplier: 1, constant: 18),
             .init(item: button, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
         ])
-        
     }
-    
 }
