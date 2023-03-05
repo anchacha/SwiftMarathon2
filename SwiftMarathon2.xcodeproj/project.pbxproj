@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5011B029B44ED000E85946 /* UIButton+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5011AF29B44ED000E85946 /* UIButton+Insets.swift */; };
 		2FB6FBC129B3E83B009A046C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6FBC029B3E83B009A046C /* AppDelegate.swift */; };
 		2FB6FBC329B3E83B009A046C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6FBC229B3E83B009A046C /* SceneDelegate.swift */; };
 		2FB6FBC529B3E83B009A046C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6FBC429B3E83B009A046C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F5011AF29B44ED000E85946 /* UIButton+Insets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Insets.swift"; sourceTree = "<group>"; };
 		2FB6FBBD29B3E83B009A046C /* SwiftMarathon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMarathon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB6FBC029B3E83B009A046C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB6FBC229B3E83B009A046C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				2FB6FBC029B3E83B009A046C /* AppDelegate.swift */,
 				2FB6FBC229B3E83B009A046C /* SceneDelegate.swift */,
 				2FB6FBC429B3E83B009A046C /* ViewController.swift */,
+				2F5011AF29B44ED000E85946 /* UIButton+Insets.swift */,
 				2FB6FBC629B3E83B009A046C /* Main.storyboard */,
 				2FB6FBC929B3E83C009A046C /* Assets.xcassets */,
 				2FB6FBCB29B3E83C009A046C /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				2FB6FBC529B3E83B009A046C /* ViewController.swift in Sources */,
 				2FB6FBC129B3E83B009A046C /* AppDelegate.swift in Sources */,
+				2F5011B029B44ED000E85946 /* UIButton+Insets.swift in Sources */,
 				2FB6FBC329B3E83B009A046C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +299,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +328,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
