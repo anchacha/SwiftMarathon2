@@ -18,19 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNB-qv-k3e">
-                                <rect key="frame" x="137.66666666666666" y="188.33333333333334" width="118" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Third button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-js-pyh">
-                                <rect key="frame" x="82.333333333333329" y="136" width="228.66666666666669" height="34.333333333333343"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system" title="Second medium button">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCO-dV-W9n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCO-dV-W9n" customClass="ShrinkableButton" customModule="SwiftMarathon2" customModuleProvider="target">
                                 <rect key="frame" x="125" y="77" width="143" height="41"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,14 +27,19 @@
                                     <directionalEdgeInsets key="contentInsets" top="10" leading="14" bottom="10" trailing="14"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-js-pyh" customClass="ShrinkableButton" customModule="SwiftMarathon2" customModuleProvider="target">
+                                <rect key="frame" x="82.333333333333329" y="136" width="228.66666666666669" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system" title="Second medium button">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jCO-dV-W9n" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A7q-NN-TKs"/>
                             <constraint firstItem="fdQ-js-pyh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U77-NG-xiF"/>
-                            <constraint firstItem="SNB-qv-k3e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jij-1b-Fmm"/>
-                            <constraint firstItem="SNB-qv-k3e" firstAttribute="top" secondItem="fdQ-js-pyh" secondAttribute="bottom" constant="18" id="kDb-Ya-Oz3"/>
                             <constraint firstItem="fdQ-js-pyh" firstAttribute="top" secondItem="jCO-dV-W9n" secondAttribute="bottom" constant="18" id="wmJ-Jj-lg0"/>
                             <constraint firstItem="jCO-dV-W9n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="ziV-ED-HKP"/>
                         </constraints>
@@ -54,7 +47,6 @@
                     <connections>
                         <outlet property="firstButton" destination="jCO-dV-W9n" id="9tw-Px-2rd"/>
                         <outlet property="secondButton" destination="fdQ-js-pyh" id="1n1-tE-G9m"/>
-                        <outlet property="thirdButton" destination="SNB-qv-k3e" id="Nvq-EE-yaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
