@@ -60,11 +60,11 @@ class ShrinkableButton: UIButton {
     
     private func animate(isPressed: Bool) {
         if self.animator.isRunning {
-            self.animator.stopAnimation(true)
+            self.animator.stopAnimation(true) 
         }
         
         self.animator.addAnimations {
-            self.transform = isPressed ? CGAffineTransform(scaleX: 0.9, y: 0.9) : .identity
+            self.transform = isPressed ? CGAffineTransform(scaleX: 0.8, y: 0.8) : .identity
         }
         self.animator.startAnimation()
     }
